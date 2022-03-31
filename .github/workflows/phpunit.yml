@@ -1,0 +1,18 @@
+name: phpunit
+on: pull_request
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: latest
+          tools: composer, phpunit
+          coverage: none
+      - name: Composer install
+        run: composer install
+      - name: Run PHPUnit
+        run: phpunit
