@@ -9,9 +9,9 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: latest
+          #php-version: latest
           tools: composer, cs2pr, phan
-          coverage: none
+          #coverage: none
       - name: Composer install
         run: composer install
       - name: Check Phan
