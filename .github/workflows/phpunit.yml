@@ -14,7 +14,7 @@ jobs:
           coverage: none
       - name: Composer install
         run: composer install
-      - name: Composer install phpunit-github-printer
-        run: composer require --dev mheap/phpunit-github-actions-printer
+      - name: Configure matchers
+        uses: mheap/phpunit-matcher-action@v1
       - name: Run PHPUnit
-        run: phpunit --printer mheap\\GithubActionsReporter\\Printer
+        run: phpunit --teamcity
