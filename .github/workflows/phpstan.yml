@@ -10,9 +10,9 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: latest
-          tools: composer, cs2pr, phpstan
+          tools: composer, phpstan
           coverage: none
       - name: Composer install
         run: composer install
       - name: Check PHPstan
-        run: phpstan analyse --error-format=checkstyle | cs2pr
+        run: phpstan analyse --error-format=github

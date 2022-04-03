@@ -10,9 +10,9 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: latest
-          tools: composer, cs2pr, psalm
+          tools: composer, psalm
           coverage: none
       - name: Composer install
         run: composer install
       - name: Check Psalm
-        run: psalm --output-format=checkstyle | cs2pr
+        run: psalm --output-format=github
