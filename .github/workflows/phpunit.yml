@@ -14,5 +14,7 @@ jobs:
           coverage: none
       - name: Composer install
         run: composer install
+      - name: Composer install phpunit-github-printer
+        run: composer require --dev mheap/phpunit-github-actions-printer
       - name: Run PHPUnit
-        run: phpunit
+        run: phpunit --printer mheap\\GithubActionsReporter\\Printer
