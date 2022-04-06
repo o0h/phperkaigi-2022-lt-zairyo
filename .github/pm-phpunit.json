@@ -8,6 +8,9 @@
           "message": 1
         },
         {
+          "regexp": "^\\s*$"
+        },
+        {
           "regexp": "^(.*):(\\d+)$",
           "file": 1,
           "line": 2,
