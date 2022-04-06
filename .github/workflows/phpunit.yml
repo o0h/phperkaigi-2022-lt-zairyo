@@ -12,11 +12,9 @@ jobs:
           php-version: latest
           tools: composer, phpunit
           coverage: none
-      - name: Composer install
-        run: composer install
-      - name: Setup problem matchers for PHP
-        run: echo "::add-matcher::${{ runner.tool_cache }}/php.json"
       - name: Setup problem matchers for PHPUnit
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
+      - name: Composer install
+        run: composer install
       - name: Run PHPUnit
         run: phpunit
