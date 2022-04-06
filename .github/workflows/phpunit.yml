@@ -13,9 +13,9 @@ jobs:
           tools: composer, phpunit
           coverage: none
       - name: Setup problem matchers for PHPUnit
-        run: echo "::add-matcher::/home/runner/work/phperkaigi-2022-lt-zairyo/phperkaigi-2022-lt-zairyo/.github/pm-phpunit.json"
+        run: echo "::add-matcher::.github/pm-phpunit.json"
       - name: cat problem matchers for PHPUnit
-        run: cat /home/runner/work/phperkaigi-2022-lt-zairyo/phperkaigi-2022-lt-zairyo/.github/pm-phpunit.json
+        run: cat .github/pm-phpunit.json
       - name: Composer install
         run: composer install
       - name: Run PHPUnit
