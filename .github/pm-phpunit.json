@@ -4,10 +4,13 @@
       "owner": "phpunit",
       "pattern": [
         {
+          "regexp": "^(.*Failed\\sasserting\\sthat.*)$",
+          "message": 1
+        },
+        {
           "regexp": "^(.*):(\\d+)$",
           "file": 1,
           "line": 2,
-          "message": 1
         }
       ]
     }
