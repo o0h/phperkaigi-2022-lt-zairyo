@@ -4,19 +4,10 @@
       "owner": "phpunit",
       "pattern": [
         {
-          "regexp": "^\\d+\\)\\s.*$"
-        },
-        {
-          "regexp": "^(.*Failed\\sasserting\\sthat.*)$",
-          "message": 1
-        },
-        {
-          "regexp": "^\\s*$"
-        },
-        {
           "regexp": "^\\/home\\/runner\\/work\\/phperkaigi-2022-lt-zairyo\\/phperkaigi-2022-lt-zairyo\\/(.*):(\\d+)$",
           "file": 1,
-          "line": 2
+          "line": 2,
+          "message": 1
         }
       ]
     }
