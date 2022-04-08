@@ -4,8 +4,14 @@
       "owner": "phpunit",
       "pattern": [
         {
-          "regexp": "(\\d+\\)[\\s\\S]*?Failed\\sasserting\\sthat[\\s\\S]*?)\n\n",
+          "regexp": "^\\d+\\)\\s.*$"
+        },
+        {
+          "regexp": "^(.*Failed\\sasserting\\sthat.*)$",
           "message": 1
+        },
+        {
+          "regexp": "^\\s*$"
         },
         {
           "regexp": "^(.*):(\\d+)$",
