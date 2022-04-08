@@ -14,7 +14,6 @@ final class PiyoTest extends TestCase
      */
     public function testThanks(): void
     {
-        $this->markTestIncomplete();
         $subject = new Piyo();
 
         $actual = $subject->thanks('hello');
