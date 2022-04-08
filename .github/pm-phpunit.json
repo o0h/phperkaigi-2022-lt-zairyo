@@ -7,14 +7,11 @@
           "regexp": "^\\d+\\)\\s.*$"
         },
         {
-          "regexp": "^(.*)?$"
-        },
-        {
-          "regexp": "^(.*Failed\\sasserting\\sthat.*)$",
+          "regexp": "^(.*)$",
           "message": 1
         },
         {
-          "regexp": "^[\\s\\S]*$"
+          "regexp": "^\\s*$"
         },
         {
           "regexp": "^(.*):(\\d+)$",
