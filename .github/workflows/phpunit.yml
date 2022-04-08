@@ -1,0 +1,22 @@
+name: phpunit
+on: pull_request
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: latest
+          tools: composer, phpunit
+          coverage: none
+      - name: Setup problem matchers for PHPUnit
+        run: echo "::add-matcher::.github/pm-phpunit.json"
+      - name: cat problem matchers for PHPUnit
+        run: cat .github/pm-phpunit.json
+      - name: Composer install
+        run: composer install
+      - name: Run PHPUnit
+        run: phpunit
